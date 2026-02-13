@@ -1,0 +1,6 @@
+.vscode/
+
+simulator/obj/
+simulator/bin/
+simulator/codegen/__pycache__/
+simulator/sim_trace.txt
