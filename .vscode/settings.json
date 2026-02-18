@@ -1,11 +1,6 @@
 {
     "makefile.extensionOutputFolder": "./.vscode",
-    "C_Cpp.errorSquiggles": "Disabled",
     "terminal.integrated.allowWorkspaceConfiguration": true,
-    "C_Cpp.codeAnalysis.clangTidy.enabled": true,
-    "C_Cpp.codeAnalysis.clangTidy.checks.disabled": [
-        "llvm-header-guard"
-    ],
     "files.associations": {
         "*.tcc": "cpp",
         "fstream": "cpp",
@@ -14,4 +9,26 @@
         "string_view": "cpp",
         "type_traits": "cpp"
     },
+
+    // Disable MS C/C++ IntelliSense in favour of clangd
+    "C_Cpp.intelliSenseEngine": "disabled",
+    "C_Cpp.errorSquiggles": "Disabled",
+    "C_Cpp.codeAnalysis.clangTidy.enabled": false,
+
+    // clangd: linting and diagnostics
+    "clangd.arguments": [
+        "--header-insertion=never",
+        "--clang-tidy",
+        "--fallback-style=none"
+    ],
+
+    // Format C/C++ on save using clangd (reads .clang-format)
+    "[c]": {
+        "editor.defaultFormatter": "llvm-vs-code-extensions.vscode-clangd",
+        "editor.formatOnSave": true
+    },
+    "[cpp]": {
+        "editor.defaultFormatter": "llvm-vs-code-extensions.vscode-clangd",
+        "editor.formatOnSave": true
+    }
 }
