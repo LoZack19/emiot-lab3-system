@@ -1,4 +1,5 @@
 .vscode/
+.cache/
 
 simulator/obj/
 simulator/bin/

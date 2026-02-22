@@ -1,0 +1,162 @@
+[
+  {
+    "arguments": [
+      "/usr/bin/g++",
+      "-c",
+      "-g",
+      "-Wno-deprecated",
+      "-I./inc",
+      "-I./src",
+      "-I/home/giovanni/university/emiot/emiot-labs/lab3/lib/systemc-ams-2.3.4/src",
+      "-I/home/giovanni/university/emiot/emiot-labs/lab3/lib/systemc-2.3.3/include",
+      "-I/home/giovanni/university/emiot/emiot-labs/lab3/lib/systemc-2.3.3/src/sysc/libs",
+      "-I/home/giovanni/university/emiot/emiot-labs/lab3/lib/systemc-2.3.3/src/sysc/kernel",
+      "-o",
+      "obj/converter_battery.o",
+      "src/converter_battery.cpp"
+    ],
+    "directory": "/home/giovanni/university/emiot/emiot-labs/lab3/external/emiot-lab3-system/simulator",
+    "file": "/home/giovanni/university/emiot/emiot-labs/lab3/external/emiot-lab3-system/simulator/src/converter_battery.cpp",
+    "output": "/home/giovanni/university/emiot/emiot-labs/lab3/external/emiot-lab3-system/simulator/obj/converter_battery.o"
+  },
+  {
+    "arguments": [
+      "/usr/bin/g++",
+      "-c",
+      "-g",
+      "-Wno-deprecated",
+      "-I./inc",
+      "-I./src",
+      "-I/home/giovanni/university/emiot/emiot-labs/lab3/lib/systemc-ams-2.3.4/src",
+      "-I/home/giovanni/university/emiot/emiot-labs/lab3/lib/systemc-2.3.3/include",
+      "-I/home/giovanni/university/emiot/emiot-labs/lab3/lib/systemc-2.3.3/src/sysc/libs",
+      "-I/home/giovanni/university/emiot/emiot-labs/lab3/lib/systemc-2.3.3/src/sysc/kernel",
+      "-o",
+      "obj/main.o",
+      "src/main.cpp"
+    ],
+    "directory": "/home/giovanni/university/emiot/emiot-labs/lab3/external/emiot-lab3-system/simulator",
+    "file": "/home/giovanni/university/emiot/emiot-labs/lab3/external/emiot-lab3-system/simulator/src/main.cpp",
+    "output": "/home/giovanni/university/emiot/emiot-labs/lab3/external/emiot-lab3-system/simulator/obj/main.o"
+  },
+  {
+    "arguments": [
+      "/usr/bin/g++",
+      "-c",
+      "-g",
+      "-Wno-deprecated",
+      "-I./inc",
+      "-I./src",
+      "-I/home/giovanni/university/emiot/emiot-labs/lab3/lib/systemc-ams-2.3.4/src",
+      "-I/home/giovanni/university/emiot/emiot-labs/lab3/lib/systemc-2.3.3/include",
+      "-I/home/giovanni/university/emiot/emiot-labs/lab3/lib/systemc-2.3.3/src/sysc/libs",
+      "-I/home/giovanni/university/emiot/emiot-labs/lab3/lib/systemc-2.3.3/src/sysc/kernel",
+      "-o",
+      "obj/converter_pv.o",
+      "src/converter_pv.cpp"
+    ],
+    "directory": "/home/giovanni/university/emiot/emiot-labs/lab3/external/emiot-lab3-system/simulator",
+    "file": "/home/giovanni/university/emiot/emiot-labs/lab3/external/emiot-lab3-system/simulator/src/converter_pv.cpp",
+    "output": "/home/giovanni/university/emiot/emiot-labs/lab3/external/emiot-lab3-system/simulator/obj/converter_pv.o"
+  },
+  {
+    "arguments": [
+      "/usr/bin/g++",
+      "-c",
+      "-g",
+      "-Wno-deprecated",
+      "-I./inc",
+      "-I./src",
+      "-I/home/giovanni/university/emiot/emiot-labs/lab3/lib/systemc-ams-2.3.4/src",
+      "-I/home/giovanni/university/emiot/emiot-labs/lab3/lib/systemc-2.3.3/include",
+      "-I/home/giovanni/university/emiot/emiot-labs/lab3/lib/systemc-2.3.3/src/sysc/libs",
+      "-I/home/giovanni/university/emiot/emiot-labs/lab3/lib/systemc-2.3.3/src/sysc/kernel",
+      "-o",
+      "obj/pv_panel.o",
+      "src/pv_panel.cpp"
+    ],
+    "directory": "/home/giovanni/university/emiot/emiot-labs/lab3/external/emiot-lab3-system/simulator",
+    "file": "/home/giovanni/university/emiot/emiot-labs/lab3/external/emiot-lab3-system/simulator/src/pv_panel.cpp",
+    "output": "/home/giovanni/university/emiot/emiot-labs/lab3/external/emiot-lab3-system/simulator/obj/pv_panel.o"
+  },
+  {
+    "arguments": [
+      "/usr/bin/g++",
+      "-c",
+      "-g",
+      "-Wno-deprecated",
+      "-I./inc",
+      "-I./src",
+      "-I/home/giovanni/university/emiot/emiot-labs/lab3/lib/systemc-ams-2.3.4/src",
+      "-I/home/giovanni/university/emiot/emiot-labs/lab3/lib/systemc-2.3.3/include",
+      "-I/home/giovanni/university/emiot/emiot-labs/lab3/lib/systemc-2.3.3/src/sysc/libs",
+      "-I/home/giovanni/university/emiot/emiot-labs/lab3/lib/systemc-2.3.3/src/sysc/kernel",
+      "-o",
+      "obj/air_quality_sensor.o",
+      "src/air_quality_sensor.cpp"
+    ],
+    "directory": "/home/giovanni/university/emiot/emiot-labs/lab3/external/emiot-lab3-system/simulator",
+    "file": "/home/giovanni/university/emiot/emiot-labs/lab3/external/emiot-lab3-system/simulator/src/air_quality_sensor.cpp",
+    "output": "/home/giovanni/university/emiot/emiot-labs/lab3/external/emiot-lab3-system/simulator/obj/air_quality_sensor.o"
+  },
+  {
+    "arguments": [
+      "/usr/bin/g++",
+      "-c",
+      "-g",
+      "-Wno-deprecated",
+      "-I./inc",
+      "-I./src",
+      "-I/home/giovanni/university/emiot/emiot-labs/lab3/lib/systemc-ams-2.3.4/src",
+      "-I/home/giovanni/university/emiot/emiot-labs/lab3/lib/systemc-2.3.3/include",
+      "-I/home/giovanni/university/emiot/emiot-labs/lab3/lib/systemc-2.3.3/src/sysc/libs",
+      "-I/home/giovanni/university/emiot/emiot-labs/lab3/lib/systemc-2.3.3/src/sysc/kernel",
+      "-o",
+      "obj/rf.o",
+      "src/rf.cpp"
+    ],
+    "directory": "/home/giovanni/university/emiot/emiot-labs/lab3/external/emiot-lab3-system/simulator",
+    "file": "/home/giovanni/university/emiot/emiot-labs/lab3/external/emiot-lab3-system/simulator/src/rf.cpp",
+    "output": "/home/giovanni/university/emiot/emiot-labs/lab3/external/emiot-lab3-system/simulator/obj/rf.o"
+  },
+  {
+    "arguments": [
+      "/usr/bin/g++",
+      "-c",
+      "-g",
+      "-Wno-deprecated",
+      "-I./inc",
+      "-I./src",
+      "-I/home/giovanni/university/emiot/emiot-labs/lab3/lib/systemc-ams-2.3.4/src",
+      "-I/home/giovanni/university/emiot/emiot-labs/lab3/lib/systemc-2.3.3/include",
+      "-I/home/giovanni/university/emiot/emiot-labs/lab3/lib/systemc-2.3.3/src/sysc/libs",
+      "-I/home/giovanni/university/emiot/emiot-labs/lab3/lib/systemc-2.3.3/src/sysc/kernel",
+      "-o",
+      "obj/lut.o",
+      "src/lut.cpp"
+    ],
+    "directory": "/home/giovanni/university/emiot/emiot-labs/lab3/external/emiot-lab3-system/simulator",
+    "file": "/home/giovanni/university/emiot/emiot-labs/lab3/external/emiot-lab3-system/simulator/src/lut.cpp",
+    "output": "/home/giovanni/university/emiot/emiot-labs/lab3/external/emiot-lab3-system/simulator/obj/lut.o"
+  },
+  {
+    "arguments": [
+      "/usr/bin/g++",
+      "-c",
+      "-g",
+      "-Wno-deprecated",
+      "-I./inc",
+      "-I./src",
+      "-I/home/giovanni/university/emiot/emiot-labs/lab3/lib/systemc-ams-2.3.4/src",
+      "-I/home/giovanni/university/emiot/emiot-labs/lab3/lib/systemc-2.3.3/include",
+      "-I/home/giovanni/university/emiot/emiot-labs/lab3/lib/systemc-2.3.3/src/sysc/libs",
+      "-I/home/giovanni/university/emiot/emiot-labs/lab3/lib/systemc-2.3.3/src/sysc/kernel",
+      "-o",
+      "obj/battery_voc.o",
+      "src/battery_voc.cpp"
+    ],
+    "directory": "/home/giovanni/university/emiot/emiot-labs/lab3/external/emiot-lab3-system/simulator",
+    "file": "/home/giovanni/university/emiot/emiot-labs/lab3/external/emiot-lab3-system/simulator/src/battery_voc.cpp",
+    "output": "/home/giovanni/university/emiot/emiot-labs/lab3/external/emiot-lab3-system/simulator/obj/battery_voc.o"
+  }
+]
