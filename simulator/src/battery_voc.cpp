@@ -1,4 +1,5 @@
 #include "battery_voc.h"
+#include "config_hw.h"
 
 #include <cmath>
 
@@ -39,7 +40,7 @@ void battery_voc::processing() {
       ΔSOC = (i_prev + i_curr) [mA] * SIM_STEP [s] / (2 * C_nom [mAs])
     where C_nom [mAs] = c_nom [mAh] * 3600 [s/h]
     */
-    double c_nom = 3300; // [mAh] nominal battery capacity
+    double c_nom = 3300.0 * BAT_N_PARALLEL; // [mAh] nominal capacity, scaled by parallel batteries
     tmpsoc -=
         (((tmpcurrent + prev_i_batt) * SIM_STEP) /
          (2 * 3600 * c_nom)); // denominator: 3600 converts mAh → mAs
