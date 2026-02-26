@@ -6,13 +6,13 @@
 // Irradiance in W/m^2
 static const double G[SIZE_PV] = {250, 500, 750, 1000};
 
-// Current at Maximum Power Point in A
+// Current at Maximum Power Point in mA
 // Scaled by PV_N_PARALLEL (modules wired in parallel)
 static const double I_MPP[SIZE_PV] = {
-    0.1688 * PV_N_PARALLEL,
-    0.3464 * PV_N_PARALLEL,
-    0.5359 * PV_N_PARALLEL,
-    0.7160 * PV_N_PARALLEL,
+    168.8 * PV_N_PARALLEL,
+    346.4 * PV_N_PARALLEL,
+    535.9 * PV_N_PARALLEL,
+    716.0 * PV_N_PARALLEL,
 };
 
 // Voltage at Maximum Power Point in V

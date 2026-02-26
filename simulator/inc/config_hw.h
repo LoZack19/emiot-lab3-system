@@ -10,6 +10,6 @@
 #define PV_N_PARALLEL  1
 #define PV_N_SERIES    2
 
-#define BAT_N_PARALLEL 2
+#define BAT_N_PARALLEL 1
 
 #endif /* CONFIG_HW_H */

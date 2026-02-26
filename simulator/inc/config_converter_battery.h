@@ -1,4 +1,5 @@
 #define SIZE_CONV_BATT 34
+// Current lookup table for battery DC-DC converter efficiency in mA
 static const double I_CONV_BATT[SIZE_CONV_BATT] = {
     0.01409,  0.01653,  0.01927,  0.02201,  0.02524,  0.02858,  0.03299,
     0.03863,  0.04611,  0.05107,  0.05864,  0.06813,  0.07907,  0.09238,
