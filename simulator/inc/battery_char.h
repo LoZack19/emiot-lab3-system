@@ -33,6 +33,7 @@ SC_MODULE(battery_char)
         //Load current instantiation
         I_batt = new sca_eln::sca_tdf::sca_isource("I_batt");
         I_batt->inp(i);
+        I_batt->scale = 1e-3; // input is in mA, ELN needs A
         I_batt->p(n2);
         I_batt->n(gnd);
         //Output voltage of the battery

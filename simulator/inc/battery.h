@@ -10,9 +10,10 @@ SC_MODULE(battery)
     sca_tdf::sca_in<double> i_batt; // Battery current
     sca_tdf::sca_out<double> v_batt; // Battery voltage
     sca_tdf::sca_out<double> soc; // Battery SOC
+    sca_tdf::sca_out<double> r_s; // Battery series resistance [Ω]
 
     // Connecting signals
-    sca_tdf::sca_signal<double> v_oc, r_s;
+    sca_tdf::sca_signal<double> v_oc;
 
     // Instantiation of battery componenets
     battery_voc* voc_module;

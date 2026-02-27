@@ -16,7 +16,7 @@
 int sc_main(int argc, char* argv[])
 {
     // Instantiate signals
-    sca_tdf::sca_signal<double> i_batt, v_batt, soc;
+    sca_tdf::sca_signal<double> i_batt, v_batt, soc, r_s;
     sca_tdf::sca_signal<double> i_air_quality_sensor; 
     sca_tdf::sca_signal<double> i_methane_sensor; 
     sca_tdf::sca_signal<double> i_temperature_sensor; 
@@ -43,6 +43,7 @@ int sc_main(int argc, char* argv[])
     battery.i_batt(i_batt);
     battery.v_batt(v_batt);
     battery.soc(soc);
+    battery.r_s(r_s);
 
     converter_battery.i_bus(i_tot);
     converter_battery.v_batt(v_batt);
@@ -86,6 +87,7 @@ int sc_main(int argc, char* argv[])
     sca_util::sca_trace(atf, real_i_pv, "real_i_pv" );
     sca_util::sca_trace(atf, i_batt, "i_batt" );
     sca_util::sca_trace(atf, v_batt, "v_batt" );
+    sca_util::sca_trace(atf, r_s, "r_s" );
     sca_util::sca_trace(atf, i_air_quality_sensor, "i_air_quality_sensor" );
     sca_util::sca_trace(atf, i_methane_sensor, "i_methane_sensor" );
     sca_util::sca_trace(atf, i_temperature_sensor, "i_temperature_sensor" );
