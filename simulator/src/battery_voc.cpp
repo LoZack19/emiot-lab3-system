@@ -27,30 +27,22 @@ void battery_voc::initialize() {
 }
 
 void battery_voc::processing() {
-    double tmpcurrent; // Battery current [mA], positive = discharge, negative = charge
+    double tmpcurrent; // [A], positive = discharge, negative = charge
 
-    // Read input current [mA]
-    tmpcurrent = i.read();
+    tmpcurrent = i.read() / 1000; // mA -> A
 
     /*
-    Compute actual state-of-charge solving the integral:
     SOC_t = SOC_{t-1} - \int^{t}_{-inf} i(\tau) / C d\tau
 
     Trapezoidal approximation:
-      ΔSOC = (i_prev + i_curr) [mA] * SIM_STEP [s] / (2 * C_nom [mAs])
-    where C_nom [mAs] = c_nom [mAh] * 3600 [s/h]
+      ΔSOC = (i_prev + i_curr) [A] * SIM_STEP [s] / (2 * C_nom [As])
     */
-    double c_nom = 3300.0 * BAT_N_PARALLEL; // [mAh] nominal capacity, scaled by parallel batteries
-    tmpsoc -=
-        (((tmpcurrent + prev_i_batt) * SIM_STEP) /
-         (2 * 3600 * c_nom)); // denominator: 3600 converts mAh → mAs
-    prev_i_batt = tmpcurrent; // Update
+    double c_nom = 3.3 * BAT_N_PARALLEL; // [Ah]
+    tmpsoc -= (((tmpcurrent + prev_i_batt) * SIM_STEP) / (2 * 3600 * c_nom));
+    prev_i_batt = tmpcurrent;
 
-    // Each instant the battery self-discharge a bit
     tmpsoc = (1.0 - SELFDISCH_FACTOR) * tmpsoc;
 
-    // Output the battery SOC
-    // Don't let the SOC overpass 100%
     if (tmpsoc >= 1) {
         soc.write(1);
         tmpsoc = 1;
@@ -63,15 +55,12 @@ void battery_voc::processing() {
                       +6.626018e+01, -6.256151e+01, +2.212670e+01};
     v_oc.write(poly_func(tmpsoc, coeff, 5));
 
-    // SOC → R_s [mΩ]: exponential fit  R_s = A*exp(k*SOC) + c
-    // Note: r_s is in mΩ; when fed to the ELN sca_r element alongside i [mA],
-    //       the resulting voltage drop is in µV (negligible), so v_batt ≈ v_oc.
-    double A = 76.33011;  // [mΩ]
-    double k = -2.92926;  // [-]  decay rate
-    double c = 56.38687;  // [mΩ] asymptotic offset
-    r_s.write(exp_decay(tmpsoc, A, k, c)); // [mΩ]
+    // SOC → R_s [Ω]: exponential fit  R_s = A*exp(-k*SOC) + c
+    double A = 0.07633011;  // [Ω]
+    double k = 2.92926;     // [-]
+    double c = 0.05638687;  // [Ω]
+    r_s.write(exp_decay(tmpsoc, A, k, c));
 
-    // When the battery SOC decreases under 1%, the simulation stops.
     if (tmpsoc <= 0.01) {
         cout << "SOC is less than or equal to 1%:"
              << " @" << sc_time_stamp() << endl;
