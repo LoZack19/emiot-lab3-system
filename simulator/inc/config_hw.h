@@ -8,8 +8,8 @@
 #define CONFIG_HW_H
 
 #define PV_N_PARALLEL  1
-#define PV_N_SERIES    3
+#define PV_N_SERIES    2
 
-#define BAT_N_PARALLEL 1
+#define BAT_N_PARALLEL 2
 
 #endif /* CONFIG_HW_H */
